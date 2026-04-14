@@ -215,6 +215,7 @@ vector<int> calc_key(vector<vector<Data>> bigrams) {
 			}
 		}
 	}
+	cout << endl;
 	return prob_len;
 }
 vector<vector<int>> factorize(vector<int> n) {
@@ -234,6 +235,10 @@ vector<vector<int>> factorize(vector<int> n) {
 		if (n[i] > 1) {
 			factors[i].push_back(n[i]);
 		}
+		for(int j=0;j<factors[i].size();j++) {
+			cout << factors[i][j] << "  ";
+		}
+		cout << endl;
 	}
 	return factors;
 }
